@@ -1,0 +1,23 @@
+.DS_Store
+__pycache__
+logs/
+
+# data 
+data/
+
+# checkpoints
+ckpts/
+model_checkpoints/
+
+# Jupyter 
+.ipynb_checkpoints
+playground.ipynb
+
+# model summary
+model_summary.txt
+
+# LICENSE
+LICENSE
+
+# env file
+environment.yml
