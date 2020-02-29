@@ -21,3 +21,21 @@ LICENSE
 
 # env file
 environment.yml
+
+# stuff for floyd
+.floydexpt
+.floydignore
+floyd.yml
+
+# google cloud cmds
+cloud_cmds.sh
+
+# tensorflow 
+runs/
+
+# eval and sample file not done yet
+eval_and_sample.py
+
+# shell scripts for floyd
+run_floyd.sh
+run_floyd_resume.sh
