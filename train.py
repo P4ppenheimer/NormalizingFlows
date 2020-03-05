@@ -28,7 +28,7 @@ NUM_EPOCHS = 25
 NUM_SAMPLES_TRAIN = 60e3 # number samples per epoch in train time. There are 60k images in MNIST
 NUM_SAMPLES_TEST = 10e3 # number samples per epoch in test time evaluation # 10k test samples in total
 # BATCH_SIZE = 64 # Standard: BATCH_SIZE = 64
-BATCH_SIZE = 256 # Standard: BATCH_SIZE = 64
+BATCH_SIZE = 5 # Standard: BATCH_SIZE = 64
 MODEL_PATH = 'model_checkpoints/model_test.pth.tar'
 RESOLUTION = [28, 28]
 
@@ -188,8 +188,6 @@ def test(epoch, net, testloader, device, loss_fn, num_samples):
         with tqdm(total=NUM_SAMPLES_TEST) as progress_bar:
             progress_bar.set_description('Test')
             
-        # commented out for shorter 
-        # with tqdm(total=len(testloader.dataset)) as progress_bar:
             for idx, (x, _) in enumerate(testloader):
 
                 if (idx+1)*BATCH_SIZE >= NUM_SAMPLES_TEST: 

@@ -1,3 +1,12 @@
+# eval and sample file not done yet
+# TODO: add to repo when done
+eval_and_sample.py
+
+# shell scripts for floyd
+run_floyd.sh
+run_floyd_resume.sh
+
+
 .DS_Store
 __pycache__
 logs/
@@ -12,6 +21,7 @@ model_checkpoints/
 # Jupyter 
 .ipynb_checkpoints
 playground.ipynb
+Untitled.ipynb
 
 # model summary
 model_summary.txt
@@ -33,9 +43,4 @@ cloud_cmds.sh
 # tensorflow 
 runs/
 
-# eval and sample file not done yet
-eval_and_sample.py
 
-# shell scripts for floyd
-run_floyd.sh
-run_floyd_resume.sh
