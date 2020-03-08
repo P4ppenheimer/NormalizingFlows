@@ -25,10 +25,10 @@ MID_CHANNELS = 64 # Standard
 NUM_BLOCKS = 3 # Standard: NUM_BLOCKS = 8 // # Corresponds to NR of resnet blocks in scale and translation networks
 NUM_SCALES = 1 # Standard: NUM_SCALES=2 ; # with NUM_SCALES = 1 we just have 4 coupling layers with checkerboard masking and w/o channel wise masking
 NUM_EPOCHS = 25
-NUM_SAMPLES_TRAIN = 60e3 # number samples per epoch in train time. There are 60k images in MNIST
-NUM_SAMPLES_TEST = 10e3 # number samples per epoch in test time evaluation # 10k test samples in total
+NUM_SAMPLES_TRAIN = 200 # number samples per epoch in train time. There are 60k images in MNIST
+NUM_SAMPLES_TEST = 200 # number samples per epoch in test time evaluation # 10k test samples in total
 # BATCH_SIZE = 64 # Standard: BATCH_SIZE = 64
-BATCH_SIZE = 5 # Standard: BATCH_SIZE = 64
+BATCH_SIZE = 50 # Standard: BATCH_SIZE = 64
 MODEL_PATH = 'model_checkpoints/model_test.pth.tar'
 RESOLUTION = [28, 28]
 
@@ -71,7 +71,11 @@ def main(args):
     # Model
     print('Building model..')
     net = RealNVP(num_scales=NUM_SCALES, in_channels=IN_CHANNELS, mid_channels=MID_CHANNELS, num_blocks=NUM_BLOCKS)
-    #print(net.modules)
+    print(net)
+    print(net.modules)
+    import sys
+    sys.exit()
+    
     
 
     net = net.to(device)
